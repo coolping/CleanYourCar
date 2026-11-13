@@ -79,18 +79,22 @@ flowchart TD
 
 ### 前置作業
 - **車機端**：UIS7870 (FYT 6318) Android 13 車載主機，已開啟 ADB Wi-Fi 除錯。
-- **開發端**：具備 `python3`、`adb` 以及 Android SDK Command-line Tools (`aapt2`, `d8`, `zipalign`, `apksigner`)。
+- **開發端**：具備 `uv`（推薦）或 `python3`、`adb` 以及 Android SDK Command-line Tools (`aapt2`, `d8`, `zipalign`, `apksigner`)。
 
-### 1. 取得原始碼
+### 1. 取得原始碼與環境建立
 ```bash
 git clone https://github.com/coolping/CleanYourCar.git
 cd CleanYourCar
+
+# 推薦使用 uv 快速同步虛擬環境與套件
+uv sync
 ```
 
 ### 2. 編譯 APK (無須肥大 Android Studio)
 專案內附微型編譯腳本，一鍵打包出約 50KB 之簽署安裝檔：
 ```bash
-python3 TpmsApp/build_apk.py
+uv run TpmsApp/build_apk.py
+# 或: python3 TpmsApp/build_apk.py
 ```
 
 ### 3. 一鍵部署至車機
@@ -115,7 +119,8 @@ python3 TpmsApp/build_apk.py
 若需在電腦終端機直接快速查看目前車機四輪胎壓狀態，可執行內附的獨立診斷腳本：
 
 ```bash
-python3 scripts/read_tire_pressure.py --device 192.168.1.100:5555
+uv run scripts/read_tire_pressure.py --device 192.168.1.100:5555
+# 或: python3 scripts/read_tire_pressure.py --device 192.168.1.100:5555
 ```
 
 輸出範例：
@@ -179,9 +184,10 @@ CleanYourCar/
 請嚴格按照下列標準作業程序 (SOP) 執行：
 1. 【環境與連線檢查】
    - 執行 `adb devices` 確認車機連線狀態（若未連線請執行 `adb connect <CAR_IP>:5555`）。
-   - 確認主機環境已具備 `python3` 與 Android SDK CLI 工具 (`aapt2`, `d8`, `apksigner`, `zipalign`)。
+   - 確認主機環境已具備 `uv` (或 `python3`) 與 Android SDK CLI 工具 (`aapt2`, `d8`, `apksigner`, `zipalign`)。
+   - 執行 `uv sync` 同步 Python 環境。
 2. 【編譯打包】
-   - 執行 `python3 TpmsApp/build_apk.py`，確認產出約 50KB 之 `TpmsApp/build/TpmsApp.apk`。
+   - 執行 `uv run TpmsApp/build_apk.py`，確認產出約 50KB 之 `TpmsApp/build/TpmsApp.apk`。
 3. 【系統推送與配置】
    - 執行 `./scripts/install_tpms.sh <CAR_IP>:5555` 完成安裝、權限配置與 Launcher 嵌入槽位綁定。
 4. 【驗證結果】
