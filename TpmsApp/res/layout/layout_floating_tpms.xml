@@ -9,7 +9,7 @@
 
     <!-- Header bar with Drag hint and Close button -->
     <RelativeLayout
-        android:layout_width="168dp"
+        android:layout_width="196dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp">
 
@@ -36,7 +36,7 @@
 
     <!-- 2x2 Grid of Tires -->
     <LinearLayout
-        android:layout_width="168dp"
+        android:layout_width="196dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
@@ -51,7 +51,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="前左: ---"
-                android:textSize="12sp"
+                android:textSize="11sp"
+                android:singleLine="true"
+                android:includeFontPadding="false"
                 android:textColor="@color/status_green" />
 
             <TextView
@@ -61,7 +63,9 @@
                 android:layout_weight="1"
                 android:gravity="end"
                 android:text="前右: ---"
-                android:textSize="12sp"
+                android:textSize="11sp"
+                android:singleLine="true"
+                android:includeFontPadding="false"
                 android:textColor="@color/status_green" />
         </LinearLayout>
 
@@ -77,7 +81,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="後左: ---"
-                android:textSize="12sp"
+                android:textSize="11sp"
+                android:singleLine="true"
+                android:includeFontPadding="false"
                 android:textColor="@color/status_green" />
 
             <TextView
@@ -87,7 +93,9 @@
                 android:layout_weight="1"
                 android:gravity="end"
                 android:text="後右: ---"
-                android:textSize="12sp"
+                android:textSize="11sp"
+                android:singleLine="true"
+                android:includeFontPadding="false"
                 android:textColor="@color/status_green" />
         </LinearLayout>
     </LinearLayout>

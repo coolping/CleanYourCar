@@ -38,6 +38,12 @@
 ![Dashboard Showcase](docs/images/dashboard_showcase.png)
 - 與左側多媒體播放器（YouTube）高度等比對齊，車輛上電開機自動連線 CANbus 刷新數據。
 
+### 2. 全域 HUD 懸浮窗 (跨應用常駐膠囊)
+![TPMS Floating HUD](docs/images/tpms_float_final.png)
+- **跨應用拖曳**：支援在 Google Maps、YouTube、CarPlay 畫面最上層懸浮顯示。
+- **單行排版**：四輪獨立顯示 `230 kPa`、`225 kPa`，字型自適應無換行截斷。
+- **位置記憶**：拖曳放開後自動儲存座標，下次啟動維持原位。
+
 ### 3. 原廠協議對比 (OEM CANbus Screen)
 ![OEM TPMS Screen](docs/images/oem_camry_tpms.png)
 - 逆向對標原廠 Camry / Toyota WC 協議介面，數值 100% 一致。
