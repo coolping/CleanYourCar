@@ -1,0 +1,33 @@
+# Build outputs
+build/
+bin/
+gen/
+out/
+*.apk
+*.ap_
+*.dex
+*.class
+
+# Keystores & Keys (Security sensitive)
+*.keystore
+*.jks
+*.key
+*.p12
+
+# Generated source files
+src/**/R.java
+
+# Logs & temporary files
+*.log
+*.tmp
+*.xml.bak
+
+# OS specific
+.DS_Store
+Thumbs.db
+.idea/
+*.iml
+.vscode/
+
+# Local testing artifacts
+/test_*

@@ -1,0 +1,65 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="180dp"
+    android:viewportWidth="120"
+    android:viewportHeight="180">
+
+    <!-- Car Body Outline (Top-down view) -->
+    <path
+        android:strokeColor="#2E384D"
+        android:strokeWidth="2.5"
+        android:fillColor="#151A24"
+        android:pathData="M40,15 C48,8 72,8 80,15 C90,25 96,48 96,70 C96,110 94,140 86,165 C80,172 70,175 60,175 C50,175 40,172 34,165 C26,140 24,110 24,70 C24,48 30,25 40,15 Z" />
+
+    <!-- Windshield -->
+    <path
+        android:strokeColor="#00E5FF"
+        android:strokeWidth="1.5"
+        android:fillColor="#1F2839"
+        android:pathData="M38,45 C46,38 74,38 82,45 L80,62 L40,62 Z" />
+
+    <!-- Rear Window -->
+    <path
+        android:strokeColor="#2E384D"
+        android:strokeWidth="1.5"
+        android:fillColor="#1F2839"
+        android:pathData="M42,125 L78,125 L76,140 C70,143 50,143 44,140 Z" />
+
+    <!-- Roof lines -->
+    <path
+        android:strokeColor="#2E384D"
+        android:strokeWidth="1"
+        android:pathData="M40,62 L42,125" />
+    <path
+        android:strokeColor="#2E384D"
+        android:strokeWidth="1"
+        android:pathData="M80,62 L78,125" />
+
+    <!-- 4 Wheels positions -->
+    <!-- Front Left Wheel -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M16,35 L25,35 A2,2 0 0,1 27,37 L27,60 A2,2 0 0,1 25,62 L16,62 A2,2 0 0,1 14,60 L14,37 A2,2 0 0,1 16,35 Z" />
+
+    <!-- Front Right Wheel -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M95,35 L104,35 A2,2 0 0,1 106,37 L106,60 A2,2 0 0,1 104,62 L95,62 A2,2 0 0,1 93,60 L93,37 A2,2 0 0,1 95,35 Z" />
+
+    <!-- Rear Left Wheel -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M16,118 L25,118 A2,2 0 0,1 27,120 L27,143 A2,2 0 0,1 25,145 L16,145 A2,2 0 0,1 14,143 L14,120 A2,2 0 0,1 16,118 Z" />
+
+    <!-- Rear Right Wheel -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M95,118 L104,118 A2,2 0 0,1 106,120 L106,143 A2,2 0 0,1 104,145 L95,145 A2,2 0 0,1 93,143 L93,120 A2,2 0 0,1 95,118 Z" />
+
+    <!-- Front Arrow / Heading -->
+    <path
+        android:strokeColor="#00E676"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M56,22 L60,16 L64,22" />
+</vector>

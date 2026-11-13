@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/float_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/float_pill_bg"
+    android:padding="8dp">
+
+    <!-- Header bar with Drag hint and Close button -->
+    <RelativeLayout
+        android:layout_width="168dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:id="@+id/tv_float_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🚗 胎壓 (kPa)"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="@color/accent_blue"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/btn_float_close"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:gravity="center"
+            android:text="✕"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <!-- 2x2 Grid of Tires -->
+    <LinearLayout
+        android:layout_width="168dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_float_fl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="前左: ---"
+                android:textSize="12sp"
+                android:textColor="@color/status_green" />
+
+            <TextView
+                android:id="@+id/tv_float_fr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="前右: ---"
+                android:textSize="12sp"
+                android:textColor="@color/status_green" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="3dp">
+
+            <TextView
+                android:id="@+id/tv_float_rl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="後左: ---"
+                android:textSize="12sp"
+                android:textColor="@color/status_green" />
+
+            <TextView
+                android:id="@+id/tv_float_rr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="後右: ---"
+                android:textSize="12sp"
+                android:textColor="@color/status_green" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

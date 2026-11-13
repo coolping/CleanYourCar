@@ -1,0 +1,63 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Dark rounded background -->
+    <path
+        android:fillColor="#161B26"
+        android:pathData="M16,0 L92,0 A16,16 0 0 1 108,16 L108,92 A16,16 0 0 1 92,108 L16,108 A16,16 0 0 1 0,92 L0,16 A16,16 0 0 1 16,0 Z" />
+    
+    <!-- Neon cyan circular gauge rim -->
+    <path
+        android:strokeColor="#00E5FF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M24,76 A36,36 0 1,1 84,76" />
+        
+    <!-- Tire tread outer teeth -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M52,14 L56,14 L56,20 L52,20 Z" />
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M28,24 L32,21 L35,26 L31,29 Z" />
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M76,24 L80,29 L76,32 L72,27 Z" />
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M16,52 L22,52 L22,56 L16,56 Z" />
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M86,52 L92,52 L92,56 L86,56 Z" />
+
+    <!-- Center text/icon indicator: Car silhouette -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M44,42 C45,38 47,36 54,36 C61,36 63,38 64,42 L68,52 L40,52 Z" />
+    <path
+        android:fillColor="#00E676"
+        android:pathData="M38,54 C38,53 40,52 42,52 L66,52 C68,52 70,53 70,54 L72,66 C72,68 70,70 68,70 L40,70 C38,70 36,68 36,66 Z" />
+        
+    <!-- 4 Wheels in Green -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M34,44 L38,44 L38,50 L34,50 Z" />
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M70,44 L74,44 L74,50 L70,50 Z" />
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M34,60 L38,60 L38,66 L34,66 Z" />
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M70,60 L74,60 L74,66 L70,66 Z" />
+
+    <!-- kPa Text below -->
+    <path
+        android:strokeColor="#00E676"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M46,84 L54,78 L62,84" />
+</vector>

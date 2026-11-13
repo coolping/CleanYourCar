@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">車載胎壓</string>
+    <string name="fl_label">左前輪</string>
+    <string name="fr_label">右前輪</string>
+    <string name="rl_label">左後輪</string>
+    <string name="rr_label">右後輪</string>
+</resources>

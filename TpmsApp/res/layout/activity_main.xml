@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark"
+    android:padding="6dp">
+
+    <!-- Compact Header Bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginBottom="3dp">
+
+        <LinearLayout
+            android:id="@+id/ll_header_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_toggle_float"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="開啟懸浮"
+                android:textSize="10sp"
+                android:textColor="@color/text_primary"
+                android:background="@drawable/btn_background"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:includeFontPadding="false"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/btn_unit_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="單位: kPa"
+                android:textSize="10sp"
+                android:textColor="@color/accent_blue"
+                android:background="@drawable/btn_background"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:includeFontPadding="false" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="🚗 胎壓"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/accent_blue"
+            android:maxLines="1"
+            android:includeFontPadding="false"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/ll_header_buttons"
+            android:layout_marginEnd="6dp" />
+    </RelativeLayout>
+
+    <!-- 4 Tires Grid with Center Vehicle -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Left Wheels (FL & RL) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+
+            <!-- FL Card -->
+            <LinearLayout
+                android:id="@+id/card_fl"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/card_background"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_marginBottom="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="左前輪"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:includeFontPadding="false"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true" />
+
+                    <TextView
+                        android:id="@+id/tv_fl_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="● 正常"
+                        android:textSize="9sp"
+                        android:textColor="@color/status_green"
+                        android:includeFontPadding="false"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_fl_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="--- kPa"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/status_green"
+                    android:maxLines="1"
+                    android:gravity="end"
+                    android:includeFontPadding="false"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <!-- RL Card -->
+            <LinearLayout
+                android:id="@+id/card_rl"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/card_background"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_marginTop="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="左後輪"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:includeFontPadding="false"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true" />
+
+                    <TextView
+                        android:id="@+id/tv_rl_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="● 正常"
+                        android:textSize="9sp"
+                        android:textColor="@color/status_green"
+                        android:includeFontPadding="false"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_rl_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="--- kPa"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/status_green"
+                    android:maxLines="1"
+                    android:gravity="end"
+                    android:includeFontPadding="false"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Center Vehicle Silhouette -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/car_chassis" />
+        </FrameLayout>
+
+        <!-- Right Wheels (FR & RR) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+
+            <!-- FR Card -->
+            <LinearLayout
+                android:id="@+id/card_fr"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/card_background"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_marginBottom="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="右前輪"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:includeFontPadding="false"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true" />
+
+                    <TextView
+                        android:id="@+id/tv_fr_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="● 正常"
+                        android:textSize="9sp"
+                        android:textColor="@color/status_green"
+                        android:includeFontPadding="false"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_fr_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="--- kPa"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/status_green"
+                    android:maxLines="1"
+                    android:gravity="end"
+                    android:includeFontPadding="false"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <!-- RR Card -->
+            <LinearLayout
+                android:id="@+id/card_rr"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/card_background"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_marginTop="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="右後輪"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:includeFontPadding="false"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true" />
+
+                    <TextView
+                        android:id="@+id/tv_rr_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="● 正常"
+                        android:textSize="9sp"
+                        android:textColor="@color/status_green"
+                        android:includeFontPadding="false"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_rr_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="--- kPa"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/status_green"
+                    android:maxLines="1"
+                    android:gravity="end"
+                    android:includeFontPadding="false"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Bottom Status Text -->
+    <TextView
+        android:id="@+id/tv_bottom_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="● CANbus 原廠連線正常"
+        android:textSize="9sp"
+        android:textColor="@color/text_secondary"
+        android:includeFontPadding="false"
+        android:layout_marginTop="2dp" />
+
+</LinearLayout>
